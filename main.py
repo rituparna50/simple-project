@@ -36,7 +36,7 @@ def dipole_field_test():
   # Tests of dipole_field() based on hand calculations. Ideally one writes these
   # tests before writing the function.
   # At (y, z) = (1, 0), the field should be (0, -1)
-  assert np.all(dipole_field([1, 0]) - np.array([0, -1])) < 1e-15
+  assert np.all(dipole_field([1, 0]) - np.array([0, -1])) < np.finfo ## tESTING fork push and pull
   # At (y, z) = (-1, 0), the field should be (0, -1)
   assert np.all(dipole_field([-1, 0]) - np.array([0, -1])) < 1e-15
   # At (y, z) = (0, 1), the field should be (0, 3)
